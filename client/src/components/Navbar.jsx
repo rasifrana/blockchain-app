@@ -22,7 +22,7 @@ const Navbar = () => {
                 {/* <img src={logo} alt="logo" className='w-16 cursor-pointer' /> */}
                 <h2 className='font-bold'>BLOCKCHAIN</h2>
             </div>
-            <ul className='text-white md:flex hidden list-none flex-row justify-between items-center flex-initial'>
+            <ul className='text-white md:flex list-none hidden flex-row justify-between items-center flex-initial'>
                 {['Market', 'Exchange', 'Tutorials', 'Wallets'].map((item, index) => (
                     <NavItem key={item + index} title={item} />
                 ))}
