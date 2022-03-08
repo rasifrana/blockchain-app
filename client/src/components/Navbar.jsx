@@ -27,7 +27,7 @@ const Navbar = () => {
                     <NavItem key={item + index} title={item} />
                 ))}
 
-                <li className='bg-[#2952e3] py-2 px-7 rounded-full cursor-pointer hover:bg-[#2546bd]'>
+                <li className='bg-[#49c5c5] py-2 px-7 rounded-full cursor-pointer hover:bg-[#2546bd]'>
                     Login
                 </li>
             </ul>
@@ -35,8 +35,18 @@ const Navbar = () => {
                 {toggleMenu
                     ? <AiOutlineClose fontSize={28} className='text-white md:hidden cursor-pointer' onClick={() => setToggleMenu(false)} />
                     : <HiMenuAlt4 fontSize={28} className='text-white md:hidden cursor-pointer' onClick={() => setToggleMenu(true)} />
-
                 }
+                {toggleMenu && (
+                    <ul className=' fixed top-0 -right-2 p-3 text-white w-[70vw] h-screen shadow-2xl md:hiden list-none
+                    flex flex-col justify-start items-end rounded-md blue-glassmorphism animate-slide-in'>
+                        <li className='text-xl w-full my-2'>
+                            <AiOutlineClose onClick={() => setToggleMenu(false)} />
+                        </li>
+                        {['Market', 'Exchange', 'Tutorials', 'Wallets'].map((item, index) => (
+                            <NavItem key={item + index} title={item} classProps="my-2 text-lg" />
+                        ))}
+                    </ul>
+                )}
             </div>
         </nav>
     );
