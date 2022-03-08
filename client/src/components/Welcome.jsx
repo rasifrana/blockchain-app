@@ -16,27 +16,26 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
         type={type}
         step="0.0001"
         value={value}
-        onChange={(e) => handleChange(e, name)}
+        onChange={handleChange}
         className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism"
     />
 );
 
 const Welcome = () => {
-    const { connectWallet, shortAddress, currentAccounts } = useContext(TransactionContext);
+    const { connectWallet, shortAddress, currentAccount, formData, setFormData, handleChange, sendTransaction } = useContext(TransactionContext);
 
-    // const handleSubmit = (e) => {
-    //     const { addressTo, amount, keyword, message } = formData;
+    const handleSubmit = (e) => {
+        const { addresTo, amount, keyword, message } = formData;
+        e.preventDefault();
 
-    //     e.preventDefault();
+        if (!addresTo || !amount || !keyword || !message) return;
+        sendTransaction();
 
-    //     if (!addressTo || !amount || !keyword || !message) return;
 
-    //     sendTransaction();
-    // };
 
-    // const connectWallet = () => {
+    }
 
-    // }
+
 
     return (
         <div className="flex w-full justify-center items-center">
@@ -48,7 +47,7 @@ const Welcome = () => {
                     <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
                         Explore the crypto world. Buy and sell cryptocurrencies easily on Krypto.
                     </p>
-                    {!currentAccounts && (
+                    {!currentAccount && (
                         <button
                             type="button"
                             onClick={connectWallet}
@@ -89,7 +88,7 @@ const Welcome = () => {
                                 <BsInfoCircle fontSize={17} color="#fff" />
                             </div>
                             <div>
-                                {currentAccounts && (
+                                {currentAccount && (
                                     <p className="text-white font-light text-sm">
                                         CA {shortAddress}
                                     </p>
@@ -104,10 +103,10 @@ const Welcome = () => {
                         </div>
                     </div>
                     <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
-                        <Input placeholder="Address To" name="addressTo" type="text" />
-                        <Input placeholder="Amount (ETH)" name="amount" type="number" />
-                        <Input placeholder="Keyword (Gif)" name="keyword" type="text" />
-                        <Input placeholder="Enter Message" name="message" type="text" />
+                        <Input placeholder="Address To" name="addressTo" type="text" handleChange={handleChange} />
+                        <Input placeholder="Amount (ETH)" name="amount" type="number" handleChange={handleChange} />
+                        <Input placeholder="Keyword (Gif)" name="keyword" type="text" handleChange={handleChange} />
+                        <Input placeholder="Enter Message" name="message" type="text" handleChange={handleChange} />
 
                         <div className="h-[1px] w-full bg-gray-400 my-2" />
 
@@ -116,7 +115,7 @@ const Welcome = () => {
                             : (
                                 <button
                                     type="button"
-                                    // onClick={handleSubmit}
+                                    onClick={handleSubmit}
                                     className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] hover:bg-[#3d4f7c] rounded-full cursor-pointer"
                                 >
                                     Send now

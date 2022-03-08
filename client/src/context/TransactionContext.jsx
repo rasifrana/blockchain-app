@@ -22,9 +22,13 @@ const getEthereumContract = () => {
 
 
 export const TransactionProvider = ({ children }) => {
-    const [currentAccounts, setCurrentAccounts] = useState('');
+    const [currentAccount, setCurrentAccount] = useState('');
+    const [formData, setFormData] = useState({ addresTo: '', amount: '', keyword: '', message: '' });
 
+    const handleChange = (e, name) => {
+        setFormData((prevData) => ({ ...prevData, [name]: e.target.value }))
 
+    }
 
 
     // Check if wallet is connected
@@ -33,11 +37,12 @@ export const TransactionProvider = ({ children }) => {
         try {
             if (!ethereum) return alert("Please Install Metamask Wallet");
             const accounts = await ethereum.request({ method: 'eth_accounts' });
-            console.log(accounts)
-
+            console.log(accounts);
             if (accounts.length) {
-                setCurrentAccounts(accounts[0]);
+                setCurrentAccount(accounts[0]);
+
             }
+
 
         } catch (error) {
             throw new Error("No Eth Object");
@@ -48,10 +53,23 @@ export const TransactionProvider = ({ children }) => {
 
     const connectWallet = async () => {
         try {
-            if (!ethereum) return alert('');
+            if (!ethereum) return alert('Please Install Metamask Wallet');
             const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
-            setCurrentAccounts(accounts[0]);
-            console.log(accounts)
+            setCurrentAccount(accounts[0]);
+            console.log(currentAccount)
+        } catch (error) {
+            throw new Error('No New Object');
+        }
+    }
+
+    // Send Transaction function
+    const sendTransaction = () => {
+        try {
+            if (!ethereum) return alert('Please Install Metamask Wallet');
+            //send
+            const { addresTo, amount, keyword, message } = formData;
+            getEthereumContract();
+
         } catch (error) {
             throw new Error('No New Object');
         }
@@ -64,7 +82,7 @@ export const TransactionProvider = ({ children }) => {
         return `${s1}----${s2}`
     }
 
-    const shortAddress = accountShortner(currentAccounts);
+    const shortAddress = accountShortner(currentAccount);
 
     useEffect(() => {
         checkIfWalletIsConnected();
@@ -72,7 +90,7 @@ export const TransactionProvider = ({ children }) => {
 
 
     return (
-        <TransactionContext.Provider value={{ connectWallet, shortAddress, currentAccounts }}>
+        <TransactionContext.Provider value={{ connectWallet, shortAddress, currentAccount, formData, setFormData, handleChange, sendTransaction }}>
             {children}
         </TransactionContext.Provider>
     )
