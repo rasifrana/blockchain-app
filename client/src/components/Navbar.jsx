@@ -17,17 +17,17 @@ const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     return (
-        <nav className='w-full flex md:justify-center justify-between items-center p-4 text-white' >
+        <nav className='w-full flex md:justify-center justify-between items-center p-4 text-slate-700' >
             <div className='md:flex-[0.5] flex-initial justify-center items-center'>
                 {/* <img src={logo} alt="logo" className='w-16 cursor-pointer' /> */}
                 <h2 className='font-bold'>BLOCKCHAIN</h2>
             </div>
-            <ul className='text-white md:flex list-none hidden flex-row justify-between items-center flex-initial'>
+            <ul className='text-slate-700 md:flex list-none hidden flex-row justify-between items-center flex-initial'>
                 {['Market', 'Exchange', 'Tutorials', 'Wallets'].map((item, index) => (
                     <NavItem key={item + index} title={item} />
                 ))}
 
-                <li className='bg-[#49c5c5] py-2 px-7 rounded-full cursor-pointer hover:bg-[#2546bd]'>
+                <li className='bg-gradient-to-r from-cyan-500 to-blue-500 py-2 px-7 rounded-full cursor-pointer hover:bg-[#2546bd]'>
                     Login
                 </li>
             </ul>
