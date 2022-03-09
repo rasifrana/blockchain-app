@@ -1,33 +1,108 @@
 import React from "react";
 
-import logo from "../../images/logo.png";
+
 
 const Footer = () => (
-    <div className="w-full flex md:justify-center justify-between items-center flex-col p-4 gradient-bg-footer">
-        <div className="w-full flex sm:flex-row flex-col justify-between items-center my-4">
-            <div className="flex flex-[0.5] justify-center items-center">
-                <img src={logo} alt="logo" className="w-32" />
+
+    <footer className="footer-1  py-8 sm:py-12 border-t-2">
+        <div className="container mx-auto px-4">
+            <div className="sm:flex sm:flex-wrap sm:-mx-4 md:py-4">
+                <div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6">
+                    <h5 className="text-xl font-bold mb-6">Features</h5>
+                    <ul className="list-none footer-links">
+                        <li className="mb-2">
+                            <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Cool stuff</a>
+                        </li>
+                        <li className="mb-2">
+                            <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Random feature</a>
+                        </li>
+                        <li className="mb-2">
+                            <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Team feature</a>
+                        </li>
+                        <li className="mb-2">
+                            <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Stuff for developers</a>
+                        </li>
+                        <li className="mb-2">
+                            <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Another one</a>
+                        </li>
+                        <li className="mb-2">
+                            <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Last time</a>
+                        </li>
+                    </ul>
+                </div>
+                <div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 sm:mt-0">
+                    <h5 className="text-xl font-bold mb-6">Resources</h5>
+                    <ul className="list-none footer-links">
+                        <li className="mb-2">
+                            <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Resource</a>
+                        </li>
+                        <li className="mb-2">
+                            <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Resource name</a>
+                        </li>
+                        <li className="mb-2">
+                            <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Another resource</a>
+                        </li>
+                        <li className="mb-2">
+                            <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Final resource</a>
+                        </li>
+                    </ul>
+                </div>
+                <div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
+                    <h5 className="text-xl font-bold mb-6">About</h5>
+                    <ul className="list-none footer-links">
+                        <li className="mb-2">
+                            <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Team</a>
+                        </li>
+                        <li className="mb-2">
+                            <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Locations</a>
+                        </li>
+                        <li className="mb-2">
+                            <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Privacy</a>
+                        </li>
+                        <li className="mb-2">
+                            <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Terms</a>
+                        </li>
+                    </ul>
+                </div>
+                <div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
+                    <h5 className="text-xl font-bold mb-6">Help</h5>
+                    <ul className="list-none footer-links">
+                        <li className="mb-2">
+                            <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Support</a>
+                        </li>
+                        <li className="mb-2">
+                            <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Help Center</a>
+                        </li>
+                        <li className="mb-2">
+                            <a href="#" className="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
-            <div className="flex flex-1 justify-evenly items-center flex-wrap sm:mt-0 mt-5 w-full">
-                <p className="text-white text-base text-center mx-2 cursor-pointer">Market</p>
-                <p className="text-white text-base text-center mx-2 cursor-pointer">Exchange</p>
-                <p className="text-white text-base text-center mx-2 cursor-pointer">Tutorials</p>
-                <p className="text-white text-base text-center mx-2 cursor-pointer">Wallets</p>
+
+            <div className="sm:flex sm:flex-wrap sm:-mx-4 mt-6 pt-6 sm:mt-12 sm:pt-12 border-t">
+                <div className="sm:w-full px-4 md:w-1/6">
+                    <strong>FWR</strong>
+                </div>
+                <div className="px-4 sm:w-1/2 md:w-1/4 mt-4 md:mt-0">
+                    <h6 className="font-bold mb-2">Address</h6>
+                    <address className="not-italic mb-4 text-sm">
+                        123 6th St.<br />
+                        Melbourne, FL 32904
+                    </address>
+                </div>
+                <div className="px-4 sm:w-1/2 md:w-1/4 mt-4 md:mt-0">
+                    <h6 className="font-bold mb-2">Free Resources</h6>
+                    <p className="mb-4 text-sm">Use our HTML blocks for <strong>FREE</strong>.<br />
+                        <em>All are MIT License</em></p>
+                </div>
+                <div className="px-4 md:w-1/4 md:ml-auto mt-6 sm:mt-4 md:mt-0">
+                    <button className="px-4 py-2 bg-purple-800 hover:bg-purple-900 rounded text-white">Get Started</button>
+                </div>
             </div>
         </div>
-
-        <div className="flex justify-center items-center flex-col mt-5">
-            <p className="text-white text-sm text-center">Come join us and hear for the unexpected miracle</p>
-            <p className="text-white text-sm text-center font-medium mt-2">info@kryptomastery.com</p>
-        </div>
-
-        <div className="sm:w-[90%] w-full h-[0.25px] bg-gray-400 mt-5 " />
-
-        <div className="sm:w-[90%] w-full flex justify-between items-center mt-3">
-            <p className="text-white text-left text-xs">@kryptomastery2022</p>
-            <p className="text-white text-right text-xs">All rights reserved</p>
-        </div>
-    </div>
+    </footer>
 );
 
 export default Footer;

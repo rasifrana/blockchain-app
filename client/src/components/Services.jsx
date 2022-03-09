@@ -19,9 +19,9 @@ const ServiceCard = ({ color, title, icon, subtitle }) => (
 
 const Services = () => (
     <div className="flex w-full justify-center items-center ">
-        <div className="flex mf:flex-row flex-col items-center justify-between md:p-20 py-12 px-4">
+        <div className="flex mf:flex-row flex-col items-center justify-between my-12 px-8 md:py-20">
             <div className="flex-1 flex flex-col justify-start items-start">
-                <h1 className="text-slate-900 text-3xl sm:text-5xl py-2 ">
+                <h1 className="text-slate-900 text-3xl sm:text-4xl py-2 ">
                     Services that we
                     <br />
                     continue to improve

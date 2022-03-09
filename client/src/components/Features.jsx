@@ -19,30 +19,30 @@ const Features = () => {
                         </div>
                         <div className="flex items-center justify-start my-2">
                             <BsShieldFillCheck fontSize={21} className="  mr-3" />
-                            <p> Safety Comes First</p>
+                            <p> Fast Transactions</p>
                         </div>
                         <div className="flex items-center justify-start my-2">
                             <BsShieldFillCheck fontSize={21} className="  mr-3" />
-                            <p> Safety Comes First</p>
+                            <p> Bonus and Refferal</p>
                         </div>
                         <div className="flex items-center justify-start my-2">
                             <BsShieldFillCheck fontSize={21} className="  mr-3" />
-                            <p> Safety Comes First</p>
+                            <p> Easy Deposit and Withdraw</p>
                         </div>
                         <div className="flex items-center justify-start my-2">
                             <BsShieldFillCheck fontSize={21} className="  mr-3" />
-                            <p> Safety Comes First</p>
+                            <p>Low Charges</p>
                         </div>
                         <div className="flex items-center justify-start my-2">
                             <BsShieldFillCheck fontSize={21} className="  mr-3" />
-                            <p> Safety Comes First</p>
+                            <p> 24/7 Support</p>
                         </div>
 
                     </div>
 
                 </div>
-                <div className="img-container flex-1 p-2 flex justify-center">
-                    <img src={vector} alt="" className="w-3/4" />
+                <div className="img-vect flex-1 p-2 flex justify-center">
+                    <img src={vector} alt="" className="w-3/4 object-cover" />
                 </div>
 
 

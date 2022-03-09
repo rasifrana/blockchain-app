@@ -5,5 +5,5 @@ export { default as Transactions } from './Transactions';
 export { default as Footer } from './Footer'
 export { default as Welcome } from './Welcome'
 export { default as Features } from './Features'
-
+export { default as Numbers } from './Numbers'
 
