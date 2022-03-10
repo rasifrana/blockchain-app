@@ -89,13 +89,13 @@ background-image: linear-gradient(316deg, #58427c 0%, #746cc0 74%);
   -webkit-text-fill-color: transparent;
 }
 
-.img-vector {
+/* .img-vector {
   height: 400px;
   background: url(../images/vector-bg.jpg);
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-}
+} */
 
 @tailwind base;
 @tailwind components;
